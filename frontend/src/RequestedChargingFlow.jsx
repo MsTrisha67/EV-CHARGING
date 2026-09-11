@@ -583,7 +583,7 @@ function HistoryScreen({ history, onHome }) {
                 link.href = URL.createObjectURL(
                   new Blob(
                     [
-                      `VoltPulse Invoice ${receipt.id}\n${receipt.host}\n${receipt.kwh} kWh\nINR ${receipt.total}`,
+                      `GridMitra Invoice ${receipt.id}\n${receipt.host}\n${receipt.kwh} kWh\nINR ${receipt.total}`,
                     ],
                     { type: "text/plain" },
                   ),
