@@ -145,7 +145,7 @@ export default function RequestedChargingFlow() {
       {stage === "charging" && (
         <ChargingScreen host={selected} session={session} onFinish={finish} />
       )}
-      {(stage === "payment" || stage === "paytm" || stage === "hdfc") && (
+      {stage === "payment" && (
         <PaymentScreen
           host={selected}
           total={total}
@@ -163,14 +163,7 @@ export default function RequestedChargingFlow() {
       {matchOpen && (
         <MatchModal onClose={() => setMatchOpen(false)} onChoose={chooseHome} />
       )}
-      <BottomNav
-        stage={stage}
-        onStage={(nextStage) => {
-          if (nextStage === "paytm") setPayment("Paytm UPI");
-          if (nextStage === "hdfc") setPayment("HDFC Fleet Visa");
-          setStage(nextStage);
-        }}
-      />
+      <BottomNav stage={stage} onStage={setStage} />
     </div>
   );
 }
@@ -612,8 +605,8 @@ function BottomNav({ stage, onStage }) {
     ["dashboard", "⌂", "Stations"],
     ["journey", "↗", "Journey"],
     ["handshake", "⌁", "House PIN"],
-    ["paytm", "◉", "Paytm UPI"],
-    ["hdfc", "▣", "HDFC Fleet Visa"],
+    ["charging", "⚡", "Charging"],
+    ["payment", "▣", "Payment"],
   ];
   return (
     <nav className="requested-nav" aria-label="Main navigation">
