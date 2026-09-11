@@ -1,13 +1,20 @@
 :root {
-  --ref-ink: #101629;
-  --ref-muted: #65736e;
-  --ref-green: #08b982;
-  --ref-green-dark: #007854;
-  --ref-blue: #168bc9;
-  --ref-lavender: #f8f7ff;
+  --ref-ink: #0f172a;
+  --ref-heading: #1e293b;
+  --ref-muted: #64748b;
+  --ref-green: #10b981;
+  --ref-green-dark: #059669;
+  --ref-blue: #0284c7;
+  --ref-blue-dark: #0369a1;
+  --ref-lavender: #f8fafc;
   --ref-card: #ffffff;
-  --ref-line: #d9e4df;
-  --ref-soft: #ecf8f3;
+  --ref-line: #e2e8f0;
+  --ref-soft: #ecfdf5;
+  --ref-soft-green: #d1fae5;
+  --ref-amber: #f59e0b;
+  --ref-amber-soft: #fef3c7;
+  --ref-red: #ef4444;
+  --ref-red-soft: #fee2e2;
 }
 html, body, #root { min-height: 100%; }
 body { background: #ecebf4; color: var(--ref-ink); }
@@ -30,28 +37,29 @@ footer { display: none; }.page-section { width: 100%; max-width: none; margin: 0
 @media (max-width: 390px) { .topbar { padding-inline: 14px; }.topbar h1 { font-size: 21px; }.system-state { padding-inline: 7px; font-size: 10px; }.page-section { padding-inline: 14px; }.explore-search { margin-inline: 14px; }.filter-row { padding-inline: 14px; }.hub-sheet { margin-inline: 14px; }.hub-sheet h2 { font-size: 20px; }.process-header { padding-inline: 15px; } }
 
 /* Reference tokens: Plus Jakarta Sans and the supplied VoltPulse light palette. */
-:root { --ref-ink: #131b2e; --ref-muted: #3c4a42; --ref-green: #10b981; --ref-green-dark: #006c49; --ref-blue: #006398; --ref-lavender: #faf8ff; --ref-card: #ffffff; --ref-line: #bbcabf; --ref-soft: #ecfdf5; --ref-surface-low: #f2f3ff; --ref-surface-high: #eaedff; }
+:root { --ref-ink: #0f172a; --ref-heading: #1e293b; --ref-muted: #64748b; --ref-green: #10b981; --ref-green-dark: #059669; --ref-blue: #0284c7; --ref-blue-dark: #0369a1; --ref-lavender: #f8fafc; --ref-card: #ffffff; --ref-line: #e2e8f0; --ref-soft: #ecfdf5; --ref-soft-green: #d1fae5; --ref-amber: #f59e0b; --ref-amber-soft: #fef3c7; --ref-red: #ef4444; --ref-red-soft: #fee2e2; --ref-surface-low: #f1f5f9; --ref-surface-high: #e2e8f0; }
 html, body, #root, button, input { font-family: 'Plus Jakarta Sans', sans-serif; }
-body { background: #d2d9f4; color: #131b2e; }
-.app-shell, .discovery-screen { background: #faf8ff; color: #131b2e; }
-.topbar, .discovery-header { border-color: #bbcabf; background: #faf8ff; }
-.topbar h1, .discovery-brand, .topbar .eyebrow, .eyebrow { color: #006c49; }
-.brand-mark, .bolt-badge { color: #006c49; background: rgba(16,185,129,.2); }
-.system-state, .battery-chip { border-color: #bbcabf; color: #131b2e; background: #ffffff; }
+body { background: #e2e8f0; color: #0f172a; }
+.app-shell, .discovery-screen { background: #f8fafc; color: #0f172a; }
+.topbar, .discovery-header { border-color: #e2e8f0; background: #ffffff; }
+.topbar h1, .discovery-brand, .topbar .eyebrow, .eyebrow { color: #059669; }
+.brand-mark, .bolt-badge { color: #059669; background: #d1fae5; }
+.system-state, .battery-chip { border-color: #e2e8f0; color: #0f172a; background: #ffffff; }
 .system-state i, .battery-chip i, .live-pill i { background: #10b981; }
-.main-nav { border-color: #bbcabf; background: #ffffff; }
-.main-nav button { color: #3c4a42; font-family: 'Plus Jakarta Sans', sans-serif; }
-.main-nav button:hover, .main-nav button.active { color: #006c49; background: #6ffbbe; }
+.main-nav { border-color: #e2e8f0; background: #ffffff; }
+.main-nav button { color: #64748b; font-family: 'Plus Jakarta Sans', sans-serif; }
+.main-nav button:hover, .main-nav button.active { color: #059669; background: #d1fae5; }
 .primary-action, .route-charge { color: #ffffff; background: #10b981; font-family: 'Plus Jakarta Sans', sans-serif; }
 .primary-action:hover, .route-charge:hover { background: #059669; }
-.metric-grid, .metric, .dashboard-card, .focus-panel, .map-panel, .node-list, .journey-process, .journey-map, .receipt, .empty-state, .recent-panel, .hub-sheet { border-color: #bbcabf; background: #ffffff; }
-.metric span, .intro-copy, .sheet-location, .hub-top, .dashboard-card p:not(.eyebrow), .event p, .process-header p:not(.eyebrow) { color: #3c4a42; }
-.metric strong, .page-intro h2, .dashboard-card h3, .hub-sheet h2, .process-header h3, .event strong { color: #131b2e; }
-.metric .lime, .lime, .hub-stats strong, .sheet-metrics b, .text-button, .match-card span, .match-card b { color: #006c49 !important; }
-.session-badge, .hub-pill, .discovery-chips .chip-fast { border-color: #6ffbbe; color: #006c49; background: #ecfdf5; }
-.filter-row button, .discovery-chips button { border-color: #bbcabf; color: #006398; background: #ffffff; }
-.filter-row .filter-active, .discovery-chips .chip-fast { border-color: #10b981; color: #006c49; background: #ecfdf5; }
-.filter-row button:nth-child(2), .discovery-chips .chip-solar { border-color: #0284c7; color: #006398; background: #f0f9ff; }
-.hub-stats, .sheet-metrics, .journey-metrics { border-color: rgba(187,202,191,.7); background: #f2f3ff; }
-.agent-tabs { background: #f2f3ff; }.agent-tabs button { border-color: #bbcabf; color: #3c4a42; }.agent-tabs button:hover, .agent-tabs button.selected { color: #006c49; background: #ecfdf5; box-shadow: inset 0 -2px #10b981; }
-.event { border-color: #bbcabf; }.event:before { background: #10b981; }.agent-badge { color: #006c49; }.event-time { color: #3c4a42; }
+.metric-grid, .metric, .dashboard-card, .focus-panel, .map-panel, .node-list, .journey-process, .journey-map, .receipt, .empty-state, .recent-panel, .hub-sheet { border-color: #e2e8f0; background: #ffffff; }
+.metric span, .intro-copy, .sheet-location, .hub-top, .dashboard-card p:not(.eyebrow), .event p, .process-header p:not(.eyebrow) { color: #64748b; }
+.metric strong, .page-intro h2, .dashboard-card h3, .hub-sheet h2, .process-header h3, .event strong { color: #0f172a; }
+.metric .lime, .lime, .hub-stats strong, .sheet-metrics b, .text-button, .match-card span, .match-card b { color: #059669 !important; }
+.session-badge, .hub-pill, .discovery-chips .chip-fast { border-color: #10b981; color: #059669; background: #ecfdf5; }
+.filter-row button, .discovery-chips button { border-color: #e2e8f0; color: #0369a1; background: #ffffff; }
+.filter-row .filter-active, .discovery-chips .chip-fast { border-color: #10b981; color: #059669; background: #ecfdf5; }
+.filter-row button:nth-child(2), .discovery-chips .chip-solar { border-color: #0284c7; color: #0369a1; background: #f0f9ff; }
+.hub-stats, .sheet-metrics, .journey-metrics { border-color: #e2e8f0; background: #f1f5f9; }
+.agent-tabs { background: #f1f5f9; }.agent-tabs button { border-color: #e2e8f0; color: #64748b; }.agent-tabs button:hover, .agent-tabs button.selected { color: #059669; background: #ecfdf5; box-shadow: inset 0 -2px #10b981; }
+.event { border-color: #e2e8f0; }.event:before { background: #10b981; }.agent-badge { color: #059669; }.event-time { color: #64748b; }
+.stage-wait { color: #0369a1; background: #f0f9ff; }.stage-success { color: #059669; border-color: #10b981; background: #ecfdf5; }
